@@ -152,7 +152,6 @@ button{
     top: 160px;
     background: #ededee;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 .box{
@@ -459,6 +458,7 @@ hr{
     }
     .top i{
         font-size: 35px;
+        cursor: pointer;
     }
     .menu-hide{
         display: none;
@@ -492,6 +492,7 @@ hr{
     .menu-show i{
         font-size: 40px;
         color: #a05841;
+        cursor: pointer;
     }
     .login .icon{
         display: flex;
@@ -701,6 +702,7 @@ hr{
     }
     .top i{
         font-size: 35px;
+        cursor: pointer;
     }
     .menu-hide{
         display: none;
@@ -734,6 +736,7 @@ hr{
     .menu-show i{
         font-size: 40px;
         color: #a05841;
+        cursor: pointer;
     }
     .login .icon{
         display: flex;
@@ -775,10 +778,10 @@ hr{
         width: 180px;
     }
     .plants{
-
         top: 0px;
         padding: 40px 0px;
         align-items: center;
+        flex-direction: column;
     }
     .box{
         margin-bottom: 20px;
