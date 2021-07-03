@@ -31,33 +31,41 @@
             <h1 id="call">We Deliver to Your Doorstep</h1>
         </div>
     </nav>
-<div id="menu" class="menu-hide">
-    <div class="login">
-        <section class="icon">
-            <i class="material-icons">account_circle</i>
+    <div id="menu" class="menu-hide">
+        <div class="login">
+            <section class="icon">
+                <i class="material-icons">account_circle</i>
                 <span>Log In</span>
-        </section>
-        <section>
-            <i onclick="hideList()" class="material-icons">close</i>
-        </section>
+            </section>
+            <section>
+                <i onclick="hideList()" class="material-icons">close</i>
+            </section>
+        </div>
+        <ul>
+            <li>Shop
+                <span id="spandown" onclick="showShop()"><img class="dropdown" src="images/drop.png" alt=""></span>
+                <span id="spanup"  onclick="hideShop()" class="menu-hide"><img class="dropup" src="images/drop.png" alt=""></span>
+                <ul id="small-shop" class="menu-hide">
+                    <li>CACTI</li>
+                    <li>PLANTS</li>
+                    <li>SACCULENTS</li>
+                </ul>
+            </li>
+            <li>About</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+        </ul>
     </div>
-    <ul>
-        <li>Shop</li>
-        <li>About</li>
-        <li>FAQ</li>
-        <li>Contact</li>
-    </ul>
-</div>
     <nav class="nav">
         <div class="nav-leftSide-div">
             <ul>
                 <li>PRICKLES & CO.</li>
-                <li>Shop
-                    <!-- <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul> -->
+                <li class="shop">Shop
+                    <ul class="shopList">
+                        <li>CACTI</li>
+                        <li>PLANTS</li>
+                        <li>SACCULENTS</li>
+                    </ul>
                 </li>
                 <li>About</li>
                 <li>FAQ</li>
@@ -243,13 +251,24 @@
     </div>
 </body>
 <script>
-    function showList()
-    {
+    function showList() {
         document.getElementById("menu").classList.remove("menu-hide");
         document.getElementById("menu").classList.add("menu-show");
     }
-    function hideList()
-    {
+    function showShop() {
+        document.getElementById("spanup").classList.remove("menu-hide");
+        document.getElementById("small-shop").classList.remove("menu-hide");
+        document.getElementById("small-shop").classList.add("smallShop");
+        document.getElementById("spandown").classList.add("menu-hide");
+
+    }
+    function hideShop(){
+        document.getElementById("spanup").classList.add("menu-hide");
+        document.getElementById("small-shop").classList.add("menu-hide");
+        document.getElementById("small-shop").classList.remove("smallShop");
+        document.getElementById("spandown").classList.remove("menu-hide");
+    }
+    function hideList() {
         document.getElementById("menu").classList.remove("menu-show");
         document.getElementById("menu").classList.add("menu-hide");
     }
