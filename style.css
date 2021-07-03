@@ -433,6 +433,25 @@ hr{
 .copy-rights p{
     margin: 0px;
 }
+.shopList{
+    display: none !important;
+    
+}
+.shopList li{
+    font-size: inherit !important;
+    font-weight: inherit !important;
+}
+.shopList li:hover{
+    margin-left: 10px;
+}
+.shop:hover .shopList{
+   display: block !important;
+   position: absolute;
+    background: #ededee;
+    padding: 20px;
+    width: 7%;
+}
+
 
 @media screen and (max-width:480px) {
     
